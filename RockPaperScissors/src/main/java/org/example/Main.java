@@ -7,6 +7,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Rock, Paper, Scissors!");
 
+        //User selection
         boolean valid = false;
         while (valid == false) {
             System.out.println("Select an option: ");
@@ -28,6 +29,9 @@ public class Main {
         }
 
         //Opponent randomisation
+        Random rnd = new Random();
+        String[] randomSelection = {"rock", "paper", "scissors"};
+        String opponentChoice = randomSelection[rnd.nextInt(3)];
 
         System.out.println("You selected __");
         System.out.println("Your opponent selected __");
