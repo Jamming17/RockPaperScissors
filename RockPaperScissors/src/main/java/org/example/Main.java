@@ -1,11 +1,14 @@
-package org.example;
+package main.java.org.example;
+import java.util.Scanner;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
         System.out.println("Welcome to Rock, Paper, Scissors!");
         System.out.println("Select an option: ");
-        // Player options
+        String userChoice = input.nextLine();
 
         //Opponent randomisation
 
