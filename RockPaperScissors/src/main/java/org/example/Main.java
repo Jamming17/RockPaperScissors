@@ -12,13 +12,14 @@ public class Main {
             System.out.println("Select an option: ");
             String userChoice = input.nextLine();
             userChoice = userChoice.toLowerCase();
-            if (userChoice == "s" || userChoice == "scissors") {
+            System.out.println(userChoice);
+            if (userChoice.equals("s") || userChoice.equals("scissors")) {
                 userChoice = "scissors";
                 valid = true;
-            } else if (userChoice == "p" || userChoice == "paper") {
+            } else if (userChoice.equals("p") || userChoice.equals("paper")) {
                 userChoice = "paper";
                 valid = true;
-            } else if (userChoice == "r" || userChoice == "rock") {
+            } else if (userChoice.equals("r") || userChoice.equals("rock")) {
                 userChoice = "rock";
                 valid = true;
             } else {
