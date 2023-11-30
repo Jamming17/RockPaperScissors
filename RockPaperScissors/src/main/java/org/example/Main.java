@@ -9,9 +9,10 @@ public class Main {
 
         //User selection
         boolean valid = false;
+        String userChoice = "";
         while (valid == false) {
             System.out.println("Select an option: ");
-            String userChoice = input.nextLine();
+            userChoice = input.nextLine();
             userChoice = userChoice.toLowerCase();
             System.out.println(userChoice);
             if (userChoice.equals("s") || userChoice.equals("scissors")) {
@@ -33,9 +34,17 @@ public class Main {
         String[] randomSelection = {"rock", "paper", "scissors"};
         String opponentChoice = randomSelection[rnd.nextInt(3)];
 
-        System.out.println("You selected __");
-        System.out.println("Your opponent selected __");
-        System.out.println("__ wins!");
+        //Decide the winner
+        System.out.println("You selected " + userChoice);
+        System.out.println("Your opponent selected " + opponentChoice);
+        if (userChoice.equals("rock") && opponentChoice.equals("scissors") || userChoice.equals("paper") && opponentChoice.equals("rock") || userChoice.equals("scissors") && opponentChoice.equals("paper")) {
+            System.out.println("You win!");
+        } else if (userChoice.equals(opponentChoice)) {
+            System.out.println("It's a tie!");
+        } else {
+            System.out.println("Your opponent wins.");
+        }
+
         //Maybe implement replayability?
     }
 }
